@@ -11,11 +11,7 @@ fn main() {
 
     for _i in 1..sid {
         for j in 0..BOARD_SIZE {
-            if board[current_board][j] == 0 {
-                print!(" ")
-            } else {
-                print!("*");
-            }
+            print!("{}", " *".chars().nth(board[current_board][j]).unwrap());
         }
         let next_board = 1 - current_board;
         for i in 1..BOARD_SIZE - 1 {
